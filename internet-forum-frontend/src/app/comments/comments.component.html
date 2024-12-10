@@ -1,0 +1,25 @@
+<app-header-template></app-header-template>
+<div>
+  <div>
+    <div>
+      <button [disabled]="!hasCreatePermission" style="display: flex; justify-content: right; margin: auto; background-color: greenyellow; margin-top: 30px;" (click)="addComment()" mat-button><mat-icon>add</mat-icon>Add comment</button>
+    </div>
+      <div  style="padding-top: 100px; padding-bottom: 50px; display: flex; justify-content: center; margin: auto;" class="card-container">
+        <div class="card" *ngFor="let comment of comments" >
+          <div style="display: flex; justify-content: right;" *ngIf="isLoggedUserComment(comment)">
+            <button [disabled]="!hasEditPermission" (click)="editComment(comment)" style="background-color: orange; margin-right: 10px;" mat-button >Edit</button>
+            <button [disabled]="!hasDeletePermission" (click)="deleteComment(comment)" style="background-color: lightcoral;" mat-button >Delete</button>
+          </div>
+          <div>
+              <p>{{comment.content}}</p>
+          </div>
+          <div>
+              <h3>Comment by: <span style="font-weight: bold;">{{ comment.userByUserIdUsername}}</span></h3>
+          </div>
+          <div style="display: flex; justify-content: right; margin: auto;">
+            <p>{{comment.date}}&nbsp;{{comment.time}}</p>
+        </div>
+        </div>
+     </div>
+  </div>
+</div>

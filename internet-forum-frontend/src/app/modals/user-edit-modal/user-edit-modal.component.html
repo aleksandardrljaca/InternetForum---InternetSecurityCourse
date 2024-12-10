@@ -1,0 +1,33 @@
+<div>
+  <div>
+    <mat-card style=" background-color: lightslategray;">
+      <mat-card-header
+        style="height: 30px; display: flex; justify-content: center; align-content: center; background-color: #2596be;">
+        <mat-icon>settings</mat-icon>
+        Manage
+      </mat-card-header>
+      <div class="properties-container">
+        <p style="display: flex; justify-content: center; align-items: center;">Permissions</p>
+        <label>
+          <input  type="checkbox" [checked]="hasCreatePermission" (click)="onCreateCheck()"> Create
+        </label>
+        <label>
+          <input type="checkbox" [checked]="hasUpdatePermission" (click)="onUpdateCheck()"> Update
+        </label>
+        <label>
+          <input type="checkbox" [checked]="hasDeletePermission" (click)="onDeleteCheck()"> Delete
+        </label>
+      </div>
+      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;" class="properties-container">
+        <p>Role</p>
+        <select [(ngModel)]="selectedItem" (change)="onItemSelected()">
+          <option *ngFor="let item of ['ADMIN','MODERATOR','USER']" [value]="item">{{ item }}</option>
+        </select>
+      </div>
+      <div style="display: flex; justify-content: right; align-content: end; margin-top: 150px;">
+        <button (click)="onClose()" mat-button>Close<mat-icon>close</mat-icon></button>
+        <button (click)="onSave()" mat-button>Save<mat-icon>save</mat-icon></button>
+      </div>
+    </mat-card>
+  </div>
+</div>

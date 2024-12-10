@@ -1,0 +1,9 @@
+<app-header-template></app-header-template>
+<div style="display: flex; margin: auto; justify-content: center;">
+  <div style="margin-top: 10%;" class="card-container">
+    <div class="card" *ngFor="let category of categories" (click)="onTopicClick(category)">
+      <h3 style="text-transform: uppercase; font-weight: bold;">{{ category.name }}</h3>
+    </div>
+</div>
+</div>
+  

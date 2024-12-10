@@ -1,0 +1,40 @@
+<div class="background">
+  <div style="text-align: center; align-content: center; margin: auto; justify-content: center; display: flex; "> <!-- Stil za centriranje i razmak ispod -->
+    <div style="margin-top: 10%;" >
+      <mat-icon style="color: black;">
+        computer
+      </mat-icon>
+      &nbsp;
+      <h1 style="display: inline; color: black;">Internet Forum</h1> <!-- Naziv iznad kartice -->
+    </div>
+  </div>
+  <mat-card>
+      <form [formGroup]="loginForm">
+        <mat-card-header>
+          <mat-card-title> 
+            Sign in
+          </mat-card-title>        
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="username" />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password" />
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="firstStageLogin()" type="button" [disabled]="!loginForm.valid" mat-button >Sign in</button>
+        </mat-card-actions>
+        <mat-card-actions class="github">
+        <button (click)="githubLogin()" mat-button type="button">Log in with GitHub <img  width="25px" src="assets/github.png"/></button>
+      </mat-card-actions>
+      <mat-card-actions>
+          <button  routerLink="../../api/register" mat-button type="button">Register</button>
+      </mat-card-actions>
+      </form>
+    </mat-card>
+   
+</div>

@@ -1,0 +1,71 @@
+{
+  "rules": [
+    {
+      "methods": [
+        "GET"
+      ],
+      "pattern": "/api/categories/**",
+      "roles": [
+        "ADMIN",
+        "USER",
+        "MODERATOR"
+      ]
+    },
+    {
+      "methods": [
+        "GET",
+        "POST",
+        "DELETE",
+        "PUT"
+
+      ],
+      "pattern": "/api/comments/**",
+      "roles": [
+        "ADMIN",
+        "USER",
+        "MODERATOR"
+      ]
+    },
+    {
+      "methods": [
+        "GET",
+        "POST",
+        "DELETE",
+        "PUT"
+
+      ],
+      "pattern": "/api/comments/*",
+      "roles": [
+        "ADMIN",
+        "USER",
+        "MODERATOR"
+      ]
+    },
+    {
+      "methods": [
+        "GET",
+        "POST",
+        "DELETE",
+        "PUT"
+
+      ],
+      "pattern": "/api/users/**",
+      "roles": [
+        "ADMIN"
+      ]
+    },
+    {
+      "methods": [
+        "GET",
+        "POST",
+        "DELETE",
+        "PUT"
+
+      ],
+      "pattern": "/api/permissions/**",
+      "roles": [
+        "ADMIN"
+      ]
+    }
+  ]
+}

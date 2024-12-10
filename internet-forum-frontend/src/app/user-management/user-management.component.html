@@ -1,0 +1,35 @@
+<app-header-template></app-header-template>
+<div style="padding: 100px 0 50px; display: flex; justify-content: center;">
+  <table class="user-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Status</th>
+        <th>Verified</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <td>{{ i+1 }}</td>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{user.role}}</td>
+        <td>{{ user.restricted ? '❌' : '✔️' }}</td>
+        <td>{{ user.verified ? '✔️' : '❌' }}</td>
+        <td> <button class="verify-btn" (click)="verify(user)" mat-button>Verify</button></td>
+        <td> <button class="restrict-btn" (click)="restrict(user)" mat-button>Restrict</button></td>
+        <td> <button class="manage-btn" (click)="manage(user)" mat-button>Manage</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

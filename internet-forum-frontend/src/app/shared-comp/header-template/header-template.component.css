@@ -1,0 +1,12 @@
+button{
+    padding-left: 50px; 
+    padding-right: 50px;
+    font-size: 15pt;
+}
+button:hover{
+    background-color: brown;
+}
+button:focus{
+    background-color: rgb(231, 96, 87);
+    color: white;
+}

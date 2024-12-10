@@ -1,0 +1,9 @@
+<header style="height: 80px; display: flex; justify-content: center; margin: auto; background-image: url('../../../assets/sonoma.png');">
+    <div style=" padding-top: 25px;" class="menu_container">
+        <button *ngIf="m||a" (click)="onForumClick()" mat-button><mat-icon>forum</mat-icon>Forum</button>
+        <button *ngIf="a" (click)="onUsersClick()"  mat-button><mat-icon>manage</mat-icon>Users</button>
+        <button *ngIf="m||a" (click)="onPendingClick()"   mat-button><mat-icon>chat</mat-icon>Pending comments</button>
+        <button (click)="logout()" mat-button><mat-icon>logout</mat-icon>Logout</button>
+    </div>
+</header>
+

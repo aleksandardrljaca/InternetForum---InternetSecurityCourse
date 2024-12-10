@@ -1,0 +1,14 @@
+<div style=" background-color: antiquewhite; height: 500px; width: 500px;">
+    <div>
+        <button style=" margin: 5px;" type="button" (click)="close()"> <mat-icon>close</mat-icon> </button>
+        <button style="margin: 5px;" type="button" (click)="send(comment.value)"><mat-icon>send</mat-icon></button>
+        
+    </div>
+    <div style="width: 40%; display: flex; flex-wrap: wrap; justify-content: center; margin: auto;" class="dialog">
+        <div style="padding:10px">
+            <textarea #comment style="width: 300px; height: 300px;" placeholder="type in your comment here"></textarea>
+        </div>
+        
+    
+    </div>
+</div>

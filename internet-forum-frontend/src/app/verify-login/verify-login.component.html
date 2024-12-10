@@ -1,0 +1,31 @@
+<div class="background">
+  <div style="display: flex;justify-content: center;">
+    <div style="margin-top:auto; margin-top: 10%;">
+      <h1><mat-icon>computer</mat-icon>&nbsp; Internet Forum</h1>
+    </div>
+  </div>
+  <div class="parent-container">
+    <div class="container">
+      <mat-card>
+        <form [formGroup]="verifyForm">
+          <mat-card-header>
+            <mat-card-title>Insert verification code</mat-card-title>
+            <mat-card-subtitle>Check your emails for verification code!</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            
+            <mat-form-field>
+              <mat-label>Code</mat-label>
+              <input matInput formControlName="code" />
+            </mat-form-field>
+          </mat-card-content>
+          <mat-card-actions>
+            <button (click)="secondStepLogin()" [disabled]="verifyForm.invalid" mat-button type="submit">Verify</button>
+          </mat-card-actions>
+        
+        </form>
+      </mat-card>
+     
+    </div>
+  </div>
+</div>

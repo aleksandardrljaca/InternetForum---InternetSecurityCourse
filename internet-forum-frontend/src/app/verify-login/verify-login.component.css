@@ -1,0 +1,38 @@
+.parent-container{
+  display: flex;
+  justify-content: center;
+}
+.container{
+  /*margin: 10%;*/
+  align-self: center;
+}
+mat-card-header{
+  background-color: #a8cbda;
+}
+mat-form-field{
+  margin-top: 25px;
+  width: 100%;
+}
+button{
+  background-color: #a8cbda;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  width:60%;
+  
+}
+button:hover{
+  background-color: #303f9f;
+  border-radius: 4px;
+}
+.background{
+  margin:0px;
+  height:100vh;
+  width:100%;
+  background:url('../../assets/sonoma.png'); 
+  -webkit-background-size:cover;
+  -o-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;
+ 
+}

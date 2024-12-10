@@ -1,0 +1,28 @@
+.user-table {
+    width: 60%; /* Širina tabele postavljena na 60% ekrana */
+    border-collapse: collapse; /* Uklanja razmake između ćelija */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-table th, .user-table td {
+    padding: 10px; /* Unutrašnji razmak za ćelije */
+    text-align: left; /* Poravnanje teksta levo */
+    border-bottom: 1px solid lightgray; /* Donja granica ćelija */
+  }
+  
+  .user-table th {
+    background-color: "background-color: #2596be"; /* Pozadina zaglavlja */
+  }
+  
+  .user-table tr:hover {
+    background-color: #f5f5f5; /* Pozadina reda na hover */
+  }
+ .manage-btn{
+    background-color: yellowgreen;
+  }
+  .restrict-btn{
+    background-color: lightcoral;
+  }
+  .verify-btn{
+    background-color: orange;
+  }
