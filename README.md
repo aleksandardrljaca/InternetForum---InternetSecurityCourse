@@ -8,4 +8,8 @@ This project implements an internet forum where registered users can exchange op
 
 The system includes user registration with email notifications, two-factor authentication, and OAuth2 login support (GitHub). Security features include JWT-based session management, a Web Application Firewall (WAF) to filter malicious traffic, and encrypted communication using digital certificates. The SIEM component logs security-sensitive activities for monitoring purposes.
 
+![](https://github.com/aleksandardrljaca/InternetForumIS/blob/main/screenshots/login.png)
 
+![](https://github.com/aleksandardrljaca/InternetForumIS/blob/main/screenshots/register.png)
+
+![](https://github.com/aleksandardrljaca/InternetForumIS/blob/main/screenshots/admin.png)
